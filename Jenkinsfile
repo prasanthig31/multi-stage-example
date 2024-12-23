@@ -6,11 +6,6 @@ pipeline {
         IMAGE_TAG = 'latest' // You can modify this as needed (e.g., ${env.BUILD_NUMBER})
     }
     stages {
-        stage('Clone Repository') {
-            steps {
-                git clone: 'master', url: 'https://github.com/prasanthig31/multi-stage-example.git' // Replace with your repo
-            }
-        }
         stage('Build Docker Image') {
             steps {
                 script {
