@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'master', url: 'https://github.com/prasanthig31/multi-stage-example.git' // Replace with your repo
+                git clone: 'master', url: 'https://github.com/prasanthig31/multi-stage-example.git' // Replace with your repo
             }
         }
         stage('Build Docker Image') {
